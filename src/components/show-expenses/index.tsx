@@ -5,9 +5,8 @@ import RangeCard from "../range-card"
 
 interface ShowExpensesProps{
     ranges : {expenses:Expense[], id:number, start:string, end:string}[],
-    active: string
 }
-const ShowExpenses = memo(({ranges, active}:ShowExpensesProps) =>{
+const ShowExpenses = memo(({ranges}:ShowExpensesProps) =>{
     console.log("hello from showExpenses")
     return (
         ranges.map((range)=>{

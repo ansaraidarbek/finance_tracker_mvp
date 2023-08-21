@@ -13,6 +13,8 @@ import { createRanges } from './components/CreateRanges';
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>(JSON.parse(localStorage.getItem("expenses")||"[]"))
+  const [active, setActive] = useState("weekly")
+  const [deleting, setDeleting] = useState(false)
   const [expense, setExpense] = useState<Expense>({
     Id : null,
     Image: '',
@@ -28,15 +30,18 @@ function App() {
     Date : obtainDate(),
     Week : obtainWeek()
   })
-  const [active, setActive] = useState("weekly")
+
   const ranges = useMemo( ()=>createRanges(expenses, active), [ expenses, active])
-  const [deleting, setDeleting] = useState(false)
   const buttons = useMemo(()=>['daily', 'weekly', 'monthly'], [])
+  // const KEY_HANDLERS:{[ket:string]:boolean} = {
+  //   KeyS: false,
+  //   AltLeft: false,
+  // };
 
   useEffect(()=>{
     localStorage.setItem("expenses", JSON.stringify(expenses))
   }, [expenses])
-
+  console.log(expense)
   const validateExpense =() =>{
     const checkFields = ()=>{
       if(expense.Name === ''){
@@ -65,11 +70,12 @@ function App() {
 
   const addExpense = () =>{
     if(!validateExpense()) return 
-    const expenseCopy = {...expense, Id:expenses.length+1, Quantity:(expense.Quantity)?expense.Quantity:1}
+    const expenseCopy = {...expense, Id:expenses.length+1, Quantity:(expense.Quantity)?expense.Quantity:1, Week : obtainWeek()}
     setExpenses(oldExpenses => [...oldExpenses, expenseCopy])
   }
 
   const saveExpense = () =>{
+    console.log(expense)
     if(!validateExpense()) return 
     setExpenses( oldExpenses => oldExpenses.map((elem) => {
       if(elem.Id === expense.Id){
@@ -77,6 +83,7 @@ function App() {
       }
       return elem
     }))
+    alert("saved")
     console.log("saveed")
   }
 
@@ -108,8 +115,14 @@ function App() {
     console.log("deleted")
   }
 
+  const onKeyDown = (e:React.KeyboardEvent<HTMLElement>) => {
+    if (e.altKey && e.code === 'KeyS'){
+      saveExpense()
+    }
+  }
+
   return (
-    <section className='main'>
+    <section className='main' tabIndex={0} onKeyDown={onKeyDown}>
       <div className='leftTable'>
         <ExpenseContext.Provider value ={setExpense}>
           <InputCard expense={expense} deleting = {deleting} deleteExpense = {deleteExpense} setDeleting={setDeleting}/>
@@ -122,7 +135,7 @@ function App() {
         </div>
         <div className="middlePanel">
           <ExpenseContext.Provider value ={setExpense}>
-            <ShowExpenses ranges={ranges} active={active}/>
+            <ShowExpenses ranges={ranges}/>
           </ExpenseContext.Provider>
         </div>
         <div className="lowerPanel">

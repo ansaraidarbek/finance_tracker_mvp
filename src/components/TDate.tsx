@@ -12,9 +12,17 @@ export const obtainDate = () =>{
     return currentDate
 }
 
+const obtainStartOfWeek =(date:Date) =>{
+    while(date.getDay() != 1){
+        date.setDate(date.getDate() - 1) 
+    }
+    date.setHours(date.getHours() - 6);
+    return date
+}
+
 export const obtainWeek = () =>{
-    const startDay = new Date(JSON.parse(sessionStorage.getItem("startDay")||'"2023-07-22"'))
-    const today = new Date(obtainDate())
-    let weeks = ""+(Math.round((today.getTime()-(startDay.getTime()-86400000))/ 604800000)+1);
+    const startDay = obtainStartOfWeek(new Date(JSON.parse(sessionStorage.getItem("startDay")||'"2023-07-22"')))
+    const today = obtainStartOfWeek(new Date(obtainDate()))
+    let weeks = ""+(Math.round((today.getTime()-(startDay.getTime()))/ 604800000)+1);
     return weeks
 }
