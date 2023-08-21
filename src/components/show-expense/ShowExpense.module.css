@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Average;
+    src: url('../fonts/AverageSans-Regular.ttf');
+  }
+
+.main{
+    display: flex;
+    width: 98%;
+    height: 4.5vh;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #BC13FE;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main:hover{
+    border: 1px solid white;
+    background-color: white;
+}
+
+.main:hover span {
+    color: #BC13FE;
+}
+
+.main>span{
+    overflow: hidden;
+    margin: 10px;
+    color: white;
+
+    font-family: Average, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.name{
+    width:40%
+}
+
+.price{
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+}
+
+.quantity{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+}

@@ -1,0 +1,22 @@
+.image{
+    background-color: #15032B;
+    border: 1px white solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    margin-top: 2vh;
+    width: calc(22vh - 2px);
+    height: 20vh;
+    overflow: hidden;
+}
+
+.image>img{
+    width: calc(22vh - 2px);
+    height: 20vh;
+    margin: 0;
+    padding: 0;
+    object-fit:fill;
+}

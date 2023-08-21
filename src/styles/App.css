@@ -1,0 +1,145 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: url("../images/blackRose_background.png");
+  background-repeat: no-repeat;
+  background-size:100vw 100vh;
+  position: relative;
+  display: flex;
+}
+.main{
+  display: flex;
+}
+
+.leftTable{
+  width: 45vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightTable{
+  width: 55vw;
+  height: 100vh;
+  background-color: #15032B;
+}
+
+.topPanel{
+  height: 14vh;
+  border-left: 2px solid #BC13FE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topPanel>button{
+  background-color: transparent;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 170px;
+  cursor: pointer;
+  height: 50px;
+  text-align: center;
+
+  color: #FFF;
+  font-family: sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.active{
+  background-color: white !important;
+  color: #2E1A47 !important;
+  transform: scale(1) !important;
+}
+
+.middlePanel{
+  height: 70vh;
+  width: calc(100% - 4px);
+  border-left: 2px solid #BC13FE;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  border-radius: 10px;
+  background: #BC13FE;
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  background: #15032B;
+}
+/*
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+.middlePanel>h1{
+  margin: 0;
+}
+
+.lowerPanel{
+  height: 16vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lowerLeftPanel{
+  display: flex;
+}
+
+.lowerRightPanel{
+  display: flex;
+}
+
+.lowerPanel button{
+
+  background-color: transparent;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #FFF;
+  font-family: sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.lowerPanel svg{
+  width: 25px;
+  height: 25px;
+  margin-right: 4px;
+}
+
+.topPanel>button:hover, 
+.lowerPanel button:hover{
+  transform: scale(1.1);
+}
+
+.disactivate{
+  transform: scale(1)!important;
+  color: gray !important;
+}
+.disactivate>svg{
+  color: gray !important;
+}

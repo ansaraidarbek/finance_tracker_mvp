@@ -1,0 +1,50 @@
+
+.inp{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh !important;
+    width: 22vh;
+}
+
+.inp>input, .inp>select{
+    min-width: calc(21vh - 2px);
+    height: 4.21vh;
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    margin: 0;
+    padding: 0.5vh;
+
+    font-size: 2.5vh;
+}
+
+.inp>input{
+    width: calc(21vh - 2px)!important;
+    height: 3vh !important;
+}
+
+.inp>span{
+    font-size: 1.5vh;
+    margin-bottom: 0.3vh;
+    font-style: italic;
+}
+
+.eC_svgSection{
+    width: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* .eI_white::placeholder{
+    color: white;
+}
+
+.eI_purple::placeholder{
+    color: #280137;
+} */
