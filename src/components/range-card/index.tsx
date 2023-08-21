@@ -3,14 +3,14 @@ import { Expense } from "../ExpenseType"
 import ShowExpense from "../show-expense"
 import RC from './RangeCard.module.css'
 
-interface RangeCard {
+interface RangeCardProps {
     range:Expense[],
     start:string,
     end:string,
     id:number
 }
 
-const RangeCard = memo(({range,start,end, id}:RangeCard) =>{
+const RangeCard = memo(({range,start,end, id}:RangeCardProps) =>{
     console.log("hello from range card " + id)
     const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"];
     const day = ["st", "nd", "rd"]

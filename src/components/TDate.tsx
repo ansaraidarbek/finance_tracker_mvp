@@ -13,7 +13,7 @@ export const obtainDate = () =>{
 }
 
 const obtainStartOfWeek =(date:Date) =>{
-    while(date.getDay() != 1){
+    while(date.getDay() !== 1){
         date.setDate(date.getDate() - 1) 
     }
     date.setHours(date.getHours() - 6);

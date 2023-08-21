@@ -43,6 +43,5 @@
     "gh-pages": "^6.0.0",
     "typescript-plugin-css-modules": "^5.0.1"
   },
-  "homepage": "http://ansaraidarbek.github.io/finance_tracker_mvp",
-  
+  "homepage": "http://ansaraidarbek.github.io/finance_tracker_mvp"
 }

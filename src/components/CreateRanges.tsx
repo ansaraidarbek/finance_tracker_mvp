@@ -27,7 +27,7 @@ export const createRanges = (expenses:Expense[], active:string) =>{
             return [date, date]
         }else if(active === 'monthly'){
             const objDate = new Date(date)
-            while(objDate.getDate() != 1){
+            while(objDate.getDate() !== 1){
                 objDate.setDate(objDate.getDate() - 1) 
             }
             let start = takeStringDate(objDate)
@@ -37,7 +37,7 @@ export const createRanges = (expenses:Expense[], active:string) =>{
             return [start, end]
         }else{
             const objDate = new Date(date)
-            while(objDate.getDay() != 1){
+            while(objDate.getDay() !== 1){
                 objDate.setDate(objDate.getDate() - 1) 
             }
             let start = takeStringDate(objDate)

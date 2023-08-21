@@ -7,7 +7,7 @@ const InputImage = memo(({image}:{image:string|null}) =>{
     console.log("hello from input image")
     const setExpense = useContext(ExpenseContext)
     return (
-        <div className={IM.image} onClick={() => setExpense(oldExpense =>({ ...oldExpense, Image:prompt("Enter")||""}))}>
+        <div className={IM.image} onClick={() => setExpense(oldExpense =>({ ...oldExpense, Image:prompt((image)?`Old src: ${image}`:"Enter")||""}))}>
         {(image === '')
             ?<UploadSVG/>
             :<img
