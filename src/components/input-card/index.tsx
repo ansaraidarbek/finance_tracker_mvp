@@ -12,7 +12,7 @@ interface inputCardProps{
     setDeleting: React.Dispatch<React.SetStateAction<boolean>>//👈️ required
 }
 
-const types:string[] = JSON.parse(sessionStorage.getItem("types")||'["еда","одноразоваяЕда","покупка"]')
+const types:string[] = JSON.parse(sessionStorage.getItem("types")||'["еда","одноразоваяЕда","покупка","транспорт"]')
 const InputCard = memo(({deleting, deleteExpense, expense, setDeleting}:inputCardProps) => {
 
     console.log("Hello from inputCard ")

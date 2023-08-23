@@ -13,7 +13,7 @@ import { createRanges } from './components/CreateRanges';
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>(JSON.parse(localStorage.getItem("expenses")||"[]"))
-  const [active, setActive] = useState("weekly")
+  const [active, setActive] = useState("daily")
   const [deleting, setDeleting] = useState(false)
   const [expense, setExpense] = useState<Expense>({
     Id : null,
@@ -32,7 +32,7 @@ function App() {
   })
 
   const ranges = useMemo( ()=>createRanges(expenses, active), [ expenses, active])
-  const buttons = useMemo(()=>['daily', 'weekly', 'monthly'], [])
+  const buttons = useMemo(()=>['weekly', 'daily', 'monthly'], [])
   // const KEY_HANDLERS:{[ket:string]:boolean} = {
   //   KeyS: false,
   //   AltLeft: false,
@@ -42,8 +42,12 @@ function App() {
     localStorage.setItem("expenses", JSON.stringify(expenses))
   }, [expenses])
   console.log(expense)
+
   const validateExpense =() =>{
     const checkFields = ()=>{
+      if(expense.GeneralName === ''){
+        return {responce:false, message:'General Name'}
+      }
       if(expense.Name === ''){
         return {responce:false, message:'Name'}
       }
@@ -63,7 +67,7 @@ function App() {
     }
     const {responce, message} = checkFields()
     if(!responce){
-      alert(message+" field is empty")
+      alert(message+" is missing")
     }
     return responce
   }
