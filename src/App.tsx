@@ -51,9 +51,6 @@ function App() {
       if(expense.Name === ''){
         return {responce:false, message:'Name'}
       }
-      if(expense.Place === ''){
-        return {responce:false, message:'Place'}
-      }
       if(expense.Price === null || expense.Price === 0){
         return {responce:false, message:'Price'}
       }
