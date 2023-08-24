@@ -80,7 +80,7 @@ function App() {
     if(!validateExpense()) return 
     setExpenses( oldExpenses => oldExpenses.map((elem) => {
       if(elem.Id === expense.Id){
-        return {...expense, Date: elem.Date}
+        return {...expense}
       }
       return elem
     }))
