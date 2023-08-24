@@ -41,7 +41,7 @@ function App() {
   useEffect(()=>{
     localStorage.setItem("expenses", JSON.stringify(expenses))
   }, [expenses])
-  console.log(expense)
+  console.log((localStorage.getItem("expenses")||"[]"))
 
   const validateExpense =() =>{
     const checkFields = ()=>{

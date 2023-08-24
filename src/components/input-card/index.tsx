@@ -51,3 +51,4 @@ const InputCard = memo(({deleting, deleteExpense, expense, setDeleting}:inputCar
 })
 
 export default InputCard
+
