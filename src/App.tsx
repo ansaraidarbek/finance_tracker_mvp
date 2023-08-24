@@ -41,7 +41,7 @@ function App() {
   useEffect(()=>{
     localStorage.setItem("expenses", JSON.stringify(expenses))
   }, [expenses])
-  console.log((localStorage.getItem("expenses")||"[]"))
+  console.log(expense)
 
   const validateExpense =() =>{
     const checkFields = ()=>{
@@ -80,7 +80,7 @@ function App() {
     if(!validateExpense()) return 
     setExpenses( oldExpenses => oldExpenses.map((elem) => {
       if(elem.Id === expense.Id){
-        return {...expense}
+        return {...expense, Date: elem.Date}
       }
       return elem
     }))
