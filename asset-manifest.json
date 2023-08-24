@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/finance_tracker_mvp/static/css/main.f0ad450d.css",
-    "main.js": "/finance_tracker_mvp/static/js/main.e18325c0.js",
+    "main.js": "/finance_tracker_mvp/static/js/main.8483ed30.js",
     "static/media/blackRose_background.png": "/finance_tracker_mvp/static/media/blackRose_background.2e9d9e5fe7db0862d37b.png",
     "static/media/AverageSans-Regular.ttf": "/finance_tracker_mvp/static/media/AverageSans-Regular.60200f53e146c8235215.ttf",
     "index.html": "/finance_tracker_mvp/index.html",
     "main.f0ad450d.css.map": "/finance_tracker_mvp/static/css/main.f0ad450d.css.map",
-    "main.e18325c0.js.map": "/finance_tracker_mvp/static/js/main.e18325c0.js.map"
+    "main.8483ed30.js.map": "/finance_tracker_mvp/static/js/main.8483ed30.js.map"
   },
   "entrypoints": [
     "static/css/main.f0ad450d.css",
-    "static/js/main.e18325c0.js"
+    "static/js/main.8483ed30.js"
   ]
 }
