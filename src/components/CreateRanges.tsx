@@ -46,6 +46,18 @@ export const createRanges = (expenses:Expense[], active:string) =>{
             return [start, end]
         }
     }
+
+    expenses.sort(function(a,b){
+        // Turn your strings into dates, and then subtract them
+        // to get a value that is either negative, positive, or zero.
+        if ( a.Date < b.Date ){
+            return -1;
+        }
+        if ( a.Date > b.Date ){
+            return 1;
+        }
+        return 0;
+      });
     
     expenses.forEach(expense =>{
         //param either day, month or week
