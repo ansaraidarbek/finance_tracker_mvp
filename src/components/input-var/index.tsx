@@ -24,7 +24,7 @@ const InputVar =  memo(({type = 'input', color="#15032B", ...inpFields}:inputVar
             <span style = {{color:color}}>{inpFields.name}</span>
             <input style = {{color:color,border: "1px solid" +color}} 
                 type={type}
-                min={obtainDate()}
+                max={obtainDate()}
                 value={inpFields.value||""}
                 onChange = {(e) => {onChange(e.target.value)}}
             />

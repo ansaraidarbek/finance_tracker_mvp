@@ -71,7 +71,7 @@ function App() {
 
   const addExpense = () =>{
     if(!validateExpense()) return 
-    const expenseCopy = {...expense, Id:expenses.length+1, Quantity:(expense.Quantity)?expense.Quantity:1, Date: obtainDate(), Week : obtainWeek()}
+    const expenseCopy = {...expense, Id:expenses.length+1, Quantity:(expense.Quantity)?expense.Quantity:1, Week : obtainWeek()}
     setExpenses(oldExpenses => [...oldExpenses, expenseCopy])
   }
 
