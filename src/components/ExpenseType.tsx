@@ -7,7 +7,7 @@ export type Expense = {
     Name : string, //👈️ required
     Place : string, //👈️ required
     Price : number|null, //👈️ required
-    Weight : string|null,
+    Weight : number|null,
     PaymentDetails : string, //👈️ required
     Type : string, //👈️ required
     Date : string, //👈️ required
