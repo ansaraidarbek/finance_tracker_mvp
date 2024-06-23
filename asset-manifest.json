@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/finance_tracker_mvp/static/css/main.f0ad450d.css",
-    "main.js": "/finance_tracker_mvp/static/js/main.536b9d24.js",
+    "main.css": "/finance_tracker_mvp/static/css/main.f411dd27.css",
+    "main.js": "/finance_tracker_mvp/static/js/main.b382167b.js",
     "static/media/blackRose_background.png": "/finance_tracker_mvp/static/media/blackRose_background.2e9d9e5fe7db0862d37b.png",
     "static/media/AverageSans-Regular.ttf": "/finance_tracker_mvp/static/media/AverageSans-Regular.60200f53e146c8235215.ttf",
     "index.html": "/finance_tracker_mvp/index.html",
-    "main.f0ad450d.css.map": "/finance_tracker_mvp/static/css/main.f0ad450d.css.map",
-    "main.536b9d24.js.map": "/finance_tracker_mvp/static/js/main.536b9d24.js.map"
+    "main.f411dd27.css.map": "/finance_tracker_mvp/static/css/main.f411dd27.css.map",
+    "main.b382167b.js.map": "/finance_tracker_mvp/static/js/main.b382167b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0ad450d.css",
-    "static/js/main.536b9d24.js"
+    "static/css/main.f411dd27.css",
+    "static/js/main.b382167b.js"
   ]
 }
